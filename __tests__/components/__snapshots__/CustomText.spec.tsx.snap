@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CustomText /> Should render snapshot correctly 1`] = `
+<View>
+  <Text
+    style={
+      [
+        {
+          "fontSize": 20,
+          "fontWeight": "bold",
+        },
+        {
+          "color": "#000000",
+        },
+      ]
+    }
+  >
+    Hello World
+  </Text>
+</View>
+`;

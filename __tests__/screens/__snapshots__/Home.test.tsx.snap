@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HomeScreen /> Should renders snapshot 1`] = `
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+      },
+      {
+        "backgroundColor": "#FFFFFF",
+      },
+    ]
+  }
+>
+  <View>
+    <Text
+      style={
+        [
+          {
+            "fontSize": 20,
+            "fontWeight": "bold",
+          },
+          {
+            "color": "#000000",
+          },
+        ]
+      }
+    >
+      Welcome to React Native!
+    </Text>
+  </View>
+</View>
+`;
