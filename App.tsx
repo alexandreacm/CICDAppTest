@@ -7,6 +7,7 @@ function App() {
   const isDarkMode = useColorScheme() === 'dark';
   return (
     // eslint-disable-next-line react-native/no-inline-styles
+    //NEw COMMENT
     <SafeAreaView style={{ flex: 1 }}>
       <StatusBar isDarkMode={isDarkMode} />
       <HomeScreen isDarkMode={isDarkMode} />
