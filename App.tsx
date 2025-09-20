@@ -7,6 +7,7 @@ function App() {
   const isDarkMode = useColorScheme() === 'dark';
 
   //Added new comment here
+  //I'll try a commit from local branch to main directly
   return (
     // eslint-disable-next-line react-native/no-inline-styles
     <SafeAreaView style={{ flex: 1 }}>
