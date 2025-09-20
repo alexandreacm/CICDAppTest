@@ -9,6 +9,7 @@ function App() {
     // eslint-disable-next-line react-native/no-inline-styles
     //NEw COMMENT
     //I am here....
+    //other thing bla bla bla
     <SafeAreaView style={{ flex: 1 }}>
       <StatusBar isDarkMode={isDarkMode} />
       <HomeScreen isDarkMode={isDarkMode} />
