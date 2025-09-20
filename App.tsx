@@ -11,6 +11,7 @@ function App() {
     //I am here....
     //other thing bla bla bla
     //new test to push the content to main branch
+    //feature-4
     <SafeAreaView style={{ flex: 1 }}>
       <StatusBar isDarkMode={isDarkMode} />
       <HomeScreen isDarkMode={isDarkMode} />
