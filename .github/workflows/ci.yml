@@ -29,9 +29,6 @@ jobs:
       fail-fast: false
       matrix: ${{fromJson(needs.setup.outputs.matrix)}}
     steps:
-      - name: 🏗 Setup repo
-        uses: actions/checkout@v4
-
       - name: 🏗 Setup Node
         uses: actions/setup-node@v4
         with:
