@@ -37,5 +37,15 @@ jobs:
       - name: run Lint
         run: npm run lint
 
+  test:
+    needs: setup
+    runs-on: ubuntu-latest
+    if: ${{ !startsWith(fromJson(needs.setup.outputs.matrix).package[0], 'none') }}
+    strategy:
+      fail-fast: false
+      matrix: ${{fromJson(needs.setup.outputs.matrix)}}
+    steps:
+      - name: 🏗 Setup repo
+        uses: actions/checkout@v4
       - name: run tests
         run: npm run test
