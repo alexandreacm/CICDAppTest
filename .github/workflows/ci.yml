@@ -9,8 +9,7 @@ jobs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
     steps:
       - name: 🏗 Setup repo
-        uses: actions/checkout@v4
-        #uses: actions/setup-node@v4
+        uses: actions/setup-node@v4
         with:
           node-version: 20 # ajuste se necessário
           cache: 'npm'
@@ -24,15 +23,11 @@ jobs:
   test:
     needs: setup
     runs-on: ubuntu-latest
-    if: ${{ !startsWith(fromJson(needs.setup.outputs.matrix).package[0], 'none') }}
-    strategy:
-      fail-fast: false
-      matrix: ${{fromJson(needs.setup.outputs.matrix)}}
     steps:
       - name: 🏗 Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-          
-      - name: run tests
+          node-version: 20 # ajuste se necessário
+          cache: 'npm'
+      - name: Jest tests
         run: npm run test
