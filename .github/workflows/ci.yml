@@ -9,6 +9,9 @@ jobs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
     steps:
       - name: 🏗 Setup repo
+        uses: actions/checkout@v4
+
+      - name: Configure Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20 # ajuste se necessário
@@ -24,10 +27,8 @@ jobs:
     needs: setup
     runs-on: ubuntu-latest
     steps:
-      - name: 🏗 Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20 # ajuste se necessário
-          cache: 'npm'
-      - name: Jest tests
-        run: npm run test
+       - name: 🏗 Setup repo
+         uses: actions/checkout@v4
+         
+       -  name: Jest tests
+          run: npm run test
