@@ -10,9 +10,7 @@ jobs:
     steps:
       - name: 🏗 Setup repo
         uses: actions/checkout@v4
-        with:
-          node-version: 18.x
-          
+
       - name: Configure Node.js
         uses: actions/setup-node@v4
         with:
@@ -28,18 +26,9 @@ jobs:
   test:
     needs: setup
     runs-on: ubuntu-latest
-    if: ${{ !startsWith(fromJson(needs.setup.outputs.matrix).package[0], 'none') }}
-    strategy:
-      fail-fast: false
-      matrix: ${{fromJson(needs.setup.outputs.matrix)}}
     steps:
-      - name: 🏗 Setup repo
-        uses: actions/checkout@v3
-
-      - name: 🏗 Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18.x
-          
-      - name: run tests
-        run: yarn test --coverage false
+       - name: 🏗 Setup repo
+         uses: actions/checkout@v4
+         
+       -  name: Jest tests
+          run: npm run test
